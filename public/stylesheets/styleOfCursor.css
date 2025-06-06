@@ -1,0 +1,55 @@
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+}
+#blob {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #c02425, #f0cb35);
+  animation: blobanimate 10s infinite linear forwards;
+  position: absolute;
+  cursor: pointer;
+  pointer-events: none;
+  z-index: -2;
+  transition: 750ms linear;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  backdrop-filter: blur(100px);
+}
+@keyframes blobanimate {
+  0% {
+    transform: rotate(0deg) scaley(100%);
+  }
+  50% {
+    transform: rotate(180deg) scaley(70%);
+  }
+  100% {
+    transform: rotate(360deg) scaley(100%);
+  }
+}
+
+h1 {
+  font-size: 10vmax;
+  text-transform: uppercase;
+  font-family: "Clash Display", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 10px;
+  cursor: pointer;
+}
